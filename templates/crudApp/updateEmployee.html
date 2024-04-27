@@ -1,0 +1,15 @@
+<html>
+    {% extends 'crudApp/base.html' %}
+    {% block content %}
+<h1>Updating Employee Information here</h1>
+<h2>{{employee.first_name}}  {{employee.last_name}} Information</h2>
+<form method='POST'>
+    FIRST NAME <input type = 'text' name = "first_name" value = "{{emp_list.first_name}}">
+    LAST NAME <input type = 'text' name = "last_name" value = "{{emp_list.last_name}}">
+    SALARY <input type = 'text' name = "salary" value = "{{emp_list.salary}}">
+    MAIL ADDRESS <input type = 'text' name = "mail_add" value = "{{emp_list.mail_add}}">
+    {% csrf_token %}
+    <input type = 'submit' value="Update Employee">
+</form>
+{% endblock %}
+</html>
